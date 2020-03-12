@@ -1,14 +1,10 @@
 <?php
-use App\Core\Config;
-use App\Classes\Careerjet_API;
-use App\Classes\MyCareerjetAPI;
+use App\Core\Routes;
+
 require_once 'vendor/autoload.php';
 
-$smarty = new Smarty;
+$page = Routes::get();
+echo $page;
+die;
 
-$search_result = MyCareerjetAPI::getSearchResult();
-
-$smarty->assign('search_result',$search_result);
-
-$smarty->display(BASE_PATH.'/templates/index.tpl');
-
+include BASE_PATH . '/' . $page;

@@ -1,5 +1,6 @@
 <?php
 
-$routes = array(
-		'/^(\/)?$/' => 'home.php',
-	);
+$GLOBALS['routes'] = [
+		'/^(\/)?$/' => 'app/home.php',
+	];
+

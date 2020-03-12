@@ -19,7 +19,9 @@
             "App\\": "app/"
         },
         "files": [
-            "./config/config.php","./config/register.php"
+            "./config/config.php",
+            "./config/register.php",
+            "./config/routes.php"
         ]
     },
     "autoload-dev": {

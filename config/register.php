@@ -17,4 +17,5 @@ $base_url = $protocol . $domain . $script_name;
 define('BASE_PATH',rtrim($base_dir,'\config'));
 
 define('BASE_URL',$base_url);
+define('ASSETS_URL',$base_url."/assets");
 
