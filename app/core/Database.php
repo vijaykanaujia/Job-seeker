@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Core;
 class Database
 {
     private static $_instance = null;
@@ -13,10 +13,10 @@ class Database
     {
         try
         {
-        $this->_pdo = new PDO('mysql:host='.Config::get('mysql/host').';'.
-                                'dbname='.Config::get('mysql/db_name'),
-                                Config::get('mysql/username'),
-                                Config::get('mysql/password')
+        $this->_pdo = new PDO('mysql:host='.Config::get('mysql.host').';'.
+                                'dbname='.Config::get('mysql.db_name'),
+                                Config::get('mysql.username'),
+                                Config::get('mysql.password')
             );
         }
         catch(PDOException $e)

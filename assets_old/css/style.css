@@ -1,0 +1,208 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ccc !important;
+  opacity: 1; /* Firefox */
+  font-weight: 300 !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ccc !important;
+  font-weight: 300 !important;
+  opacity: 1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ccc !important;
+  font-weight: 300 !important;
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+h2{
+    font-size: 40px;
+    color: #ff6633;
+    font-weight: 300;
+}
+.home-sec1{
+	min-height: 600px;
+}
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/header-bgd.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {	
+  font-size: 33px;
+  font-size: 2.063rem;
+  
+  font-weight: 300;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #336666;
+    border-color: #336666;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #336666;
+    border-color: #336666;
+}
+div#hi-menu {
+    border-bottom: 5px solid #fc672c;
+}
+@media (min-width: 768px) {
+	header.masthead {
+		padding-top: 12rem;
+		padding-bottom: 12rem;
+	}
+	header.masthead h1 {
+		font-size: 2.75rem;	
+	}
+	img.logo {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+}
+.hi-header {
+    height: 100px;
+    position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.3rem;
+    padding-left: .5rem;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #999999;
+    font-weight: 600;
+    font-size: 14px;
+}
+.flexme {
+    display: flex;
+}
+.form-control:first-child {
+    margin-right: 10px;
+}
+.form-control-lg {
+    height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    border-radius: 0.1rem;
+    color: #999;
+	font-weight: 300;
+    border: 1px solid #cccccc;
+}
+form.header-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.2rem;
+}
+img.logo {
+
+    z-index: 99;
+}
+div#hi-menu .navbar {
+    min-height: 100px;
+}
+section {
+    padding-top: 60px;
+}
+.btn {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+p.nav-heading{
+	color: #ddd;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.footer-sub-heading a{
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ddd;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+ul.follow-links{
+	position: absolute;
+    bottom: 0px;
+}
+
+ul.follow-links li {
+    vertical-align: middle;
+}
+
+ul.follow-links li:first-child{
+	color:#ddd;
+	font-size: 18px;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.copyright{
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#ddd;
+	font-size:12px;
+	}
+
+footer.footer {
+
+}
+footer.footer {
+	position: relative;
+    background-color: #333333;
+    background: #333333 url(../img/footer-bgd.png) no-repeat center center;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+table.table-interns thead tr th,table.table-interns tbody tr td{
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#464545;
+  font-size:12px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+p.potentail-info{
+  font-size: 13px;
+  white-space: nowrap;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+img.profile-image{
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
