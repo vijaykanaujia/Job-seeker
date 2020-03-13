@@ -21,7 +21,7 @@
         "files": [
             "./config/config.php",
             "./config/register.php",
-            "./config/routes.php"
+            "./config/smarty.php"
         ]
     },
     "autoload-dev": {

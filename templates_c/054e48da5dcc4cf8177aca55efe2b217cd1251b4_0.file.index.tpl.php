@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-12 14:08:08
+/* Smarty version 3.1.34-dev-7, created on 2020-03-13 11:54:50
   from 'E:\htdocs\core-php-boilerplate\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6a3438b320d9_42865251',
+  'unifunc' => 'content_5e6b667ae42c90_67608627',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '054e48da5dcc4cf8177aca55efe2b217cd1251b4' => 
     array (
       0 => 'E:\\htdocs\\core-php-boilerplate\\templates\\index.tpl',
-      1 => 1584018485,
+      1 => 1584086957,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6a3438b320d9_42865251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6b667ae42c90_67608627 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -39,7 +39,6 @@ function content_5e6a3438b320d9_42865251 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
   <!-- Navigation -->
-
 <div id="hi-menu"> 
 <div class="container"> 
  <nav class="navbar navbar-expand-lg navbar-light">
@@ -74,11 +73,13 @@ function content_5e6a3438b320d9_42865251 (Smarty_Internal_Template $_smarty_tpl)
           <h1 class="mb-5">A Headline Breifly Explaining What The Website Does</h1>
         </div>
         <div class="col-md-12 col-lg-10 col-xl-9 mx-auto">
-          <form class="header-form" action="#" method="post">
+          <form class="header-form" action="app/search.php" method="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0 flexme">
-                <input type="text" name="keyword" class="form-control form-control-lg" placeholder="Search for a job description......">
-				<input type="text" name="location" class="form-control form-control-lg" placeholder="Country...">
+                <input type="text" name="keyword" value="<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+" class="form-control form-control-lg" placeholder="Search for a job description......">
+				<input type="text" name="location" value="<?php echo $_smarty_tpl->tpl_vars['location']->value;?>
+" class="form-control form-control-lg" placeholder="Country...">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
@@ -173,44 +174,6 @@ function content_5e6a3438b320d9_42865251 (Smarty_Internal_Template $_smarty_tpl)
 				<p class="text-left">The more boxses you tick the narrow your search becomes and this should assis with finding the most suitable candidate quickly.</p>
 			</div>
 		</div>
-
-		<div class="row">
-			<?php if (count($_smarty_tpl->tpl_vars['search_result']->value['jobs']) != 0) {?>
-				<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['search_result']->value['jobs']['result'], 'jobs');
-$_smarty_tpl->tpl_vars['jobs']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['jobs']->value) {
-$_smarty_tpl->tpl_vars['jobs']->do_else = false;
-?>
-					<div class="col-sm-12">
-						<div class="card mb-2">
-							<div class="job-information card-body">
-								<p class="text-left job-title"><a href="<?php echo $_smarty_tpl->tpl_vars['jobs']->value['url'];?>
-"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['title'];?>
-</a></p>
-								<p class="text-left job-company">
-									<i class="fa fa-building"></i>  <?php echo $_smarty_tpl->tpl_vars['jobs']->value['company'] ? $_smarty_tpl->tpl_vars['jobs']->value['company'] : '..';?>
-
-								</p>
-								<p class="text-left job-location"><i class="fa fa-map-marker"></i> <?php echo $_smarty_tpl->tpl_vars['jobs']->value['location'];?>
-</p>
-								<p class="text-left job-description"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['description'];?>
-</p>
-								<p class="text-left job-date"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['date'];?>
-</p>
-							</div>
-						</div>
-					</div>
-				<?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-			<?php } else { ?>
-				<div class="col-sm-12">
-					<h4 class="text-center text-warning">No data found</h4>
-				</div>
-			<?php }?>
-			<div class="col-sm-12"></div>
-		</div>
     </div>
   </section>
 
@@ -280,6 +243,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php echo '<script'; ?>
  src="./assets/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+
   </body>
 </html><?php }
 }

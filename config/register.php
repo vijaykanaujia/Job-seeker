@@ -8,14 +8,15 @@ $protocol = empty($_SERVER['HTTPS']) ? 'http://' : 'https://';
 // domain name
 $domain = $_SERVER['SERVER_NAME'];
 
-// script name
-$script_name = rtrim($_SERVER['PHP_SELF'],'/index.php');
+define('BASE_PATH',rtrim($base_dir,'\config'));
+
+$folder = explode('\\', BASE_PATH);
 
 //base url
-$base_url = $protocol . $domain . $script_name;
-
-define('BASE_PATH',rtrim($base_dir,'\config'));
+$base_url = $protocol . $domain . "/". end($folder);
 
 define('BASE_URL',$base_url);
 define('ASSETS_URL',$base_url."/assets");
+
+
 

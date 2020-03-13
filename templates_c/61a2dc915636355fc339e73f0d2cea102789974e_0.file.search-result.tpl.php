@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-12 19:57:40
-  from 'F:\htdocs\core-php-boilerplate\templates\index.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-03-13 11:55:05
+  from 'E:\htdocs\core-php-boilerplate\templates\search-result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6a86240d37d1_85914265',
+  'unifunc' => 'content_5e6b668943d521_79859369',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '444730d8fcdf1bb2497742f75d6af91eb2b42a4b' => 
+    '61a2dc915636355fc339e73f0d2cea102789974e' => 
     array (
-      0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\index.tpl',
-      1 => 1584039457,
+      0 => 'E:\\htdocs\\core-php-boilerplate\\templates\\search-result.tpl',
+      1 => 1584086879,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:./pagination.tpl' => 1,
   ),
 ),false)) {
-function content_5e6a86240d37d1_85914265 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6b668943d521_79859369 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -30,8 +31,8 @@ function content_5e6a86240d37d1_85914265 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 	
 
     <title>Hungry Interns</title>
@@ -39,11 +40,10 @@ function content_5e6a86240d37d1_85914265 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
   <!-- Navigation -->
-
 <div id="hi-menu"> 
 <div class="container"> 
  <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" height="130" class="logo"/></a>
+  <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" height="130" class="logo"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -74,11 +74,13 @@ function content_5e6a86240d37d1_85914265 (Smarty_Internal_Template $_smarty_tpl)
           <h1 class="mb-5">A Headline Breifly Explaining What The Website Does</h1>
         </div>
         <div class="col-md-12 col-lg-10 col-xl-9 mx-auto">
-          <form class="header-form" action="#" method="post">
+          <form class="header-form" action="search.php" method="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0 flexme">
-                <input type="text" name="keyword" class="form-control form-control-lg" placeholder="Search for a job description......">
-				<input type="text" name="location" class="form-control form-control-lg" placeholder="Country...">
+                <input type="text" name="keyword" value="<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+" class="form-control form-control-lg" placeholder="Search for a job description......">
+				<input type="text" name="location" value="<?php echo $_smarty_tpl->tpl_vars['location']->value;?>
+" class="form-control form-control-lg" placeholder="Country...">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
@@ -94,88 +96,7 @@ function content_5e6a86240d37d1_85914265 (Smarty_Internal_Template $_smarty_tpl)
   <section class="home-sec1 text-center">
     <div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-			  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-			    <div class="features-icons-icon d-flex">
-			      <i class="icon-layers m-auto text-primary"></i>
-			    </div>
-			    <h2>What We Do</h2>
-			  </div>
-			</div>		
-		</div>
-
-      	<div class="row">
-			<div class="col-sm-6">
-				<div class="card">
-					<div class="card-heading">
-						
-					</div>
-					<div class="card-body">
-						<div class="table-responsive">
-							<table class="table table-interns">
-								<thead>
-									<tr>
-										<td colspan="7" class="border-top-0">
-											<div class="row">
-												<div class="col-sm-6">
-													<p class="mb-0 potentail-info"><i class="fa fa-user fa-2x"></i> &nbsp;&nbsp; we have <span class="text-info fa-2x">000</span> potential interns for you</p>
-												</div>
-												<div class="col-sm-6">
-													<ul class="list-inline pull-right">
-														<li class="list-inline-item">
-															<i class="fa fa-list"></i>
-														</li>
-														<li class="list-inline-item">
-														<i class="fa fa-th"></i>
-														</li>
-														<li class="list-inline-item">Sort by : </li>
-														<li class="list-inline-item">
-															<select class="form-control" name="" id="">
-																<option value="">Relevance</option>
-															</select>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th class="border-bottom-0"></th>
-										<th class="border-bottom-0">NAME</th>
-										<th class="border-bottom-0">SKILLS</th>
-										<th class="border-bottom-0">AVAILABLE FROM</th>
-										<th class="border-bottom-0">AVAILABLE TO</th>
-										<th class="border-bottom-0">LOCATION</th>
-										<th class="border-bottom-0">CONTACT</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<img src="./assets/img/profile.jpg" class="profile-image"></td>
-										<td>Demo</td>
-										<td>Web design,Writer,Speaker</td>
-										<td>FEB 2020</td>
-										<td>APR 2020</td>
-										<td>India,Nepal</td>
-										<td><button type="button" class="btn btn-sm btn-info btn-size">Contact</button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<h3 class="text-info text-left">Unique student search system</h2>
-				<p class="text-left">Employee can use our unique student search facility to browse  our large and growing database of student.</p>
-				<h3 class="text-info text-left">Search using at least 3 parameters</h2>
-				<p class="text-left">The more boxses you tick the narrow your search becomes and this should assis with finding the most suitable candidate quickly.</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<?php if (count($_smarty_tpl->tpl_vars['search_result']->value['jobs']) != 0) {?>
+			<?php if (($_smarty_tpl->tpl_vars['search_result']->value['jobs']['pages'] != 0)) {?>
 				<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['search_result']->value['jobs']['result'], 'jobs');
 $_smarty_tpl->tpl_vars['jobs']->do_else = true;
@@ -209,7 +130,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 					<h4 class="text-center text-warning">No data found</h4>
 				</div>
 			<?php }?>
-			<div class="col-sm-12"></div>
+			<div class="col-sm-12 text-right">
+				<?php $_smarty_tpl->_subTemplateRender('file:./pagination.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+			</div>
 		</div>
     </div>
   </section>
@@ -257,7 +181,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 		
 		</div>
 		<div class="col-sm-3 mb100">
-			<img src="./assets/img/footer-logo.png" class="img-fluid">
+			<img src="../assets/img/footer-logo.png" class="img-fluid">
 		</div>
       </div>
 
@@ -278,8 +202,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="./assets/js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="../assets/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+
   </body>
 </html><?php }
 }

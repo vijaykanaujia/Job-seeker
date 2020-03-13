@@ -12,43 +12,48 @@ class MyCareerjetAPI{
 		$locaiton = Input::get('location') ? : '';
 		$api = new Careerjet_API('en_GB') ;
 		$page = Input::get('page') ? : 1; # Or from parameters.
+
 		$pagesize = Input::get('pagesize') ? : 10;
 
 		$result = $api->search(array(
 		  'keywords' => $keyword,
 		  'location' => $locaiton,
-		  'page' => $page ,
+		  'page' => $page,
 		  'pagesize' => $pagesize,
 		  'affid' => '5704082add03b271cfad611e8cd277c7',
 		));
 
+
 		if( $result->type == 'JOBS' ){
-			$jobs = $result->jobs;
 			$data['jobs']['pages'] = $result->pages;
-			foreach( $jobs as $job ) {
-				$data['jobs']['result'][] = [
-					'url' => $job->url,
-					'title' => $job->title,
-					'location' => $job->locations,
-					'company' => $job->company,
-					'salary' => $job->salary,
-					'date' => $job->date,
-					'description' => $job->description
-				];
+			if($result->pages > 0){
+				$jobs = $result->jobs;
+				foreach( $jobs as $job ) {
+					$data['jobs']['result'][] = [
+						'url' => $job->url,
+						'title' => $job->title,
+						'location' => $job->locations,
+						'company' => $job->company,
+						'salary' => $job->salary,
+						'date' => $job->date,
+						'description' => $job->description
+					];
+				}
 			}
 		}
-		$data['jobs']['pagination'] = self::makePagination($page, $pagesize, $data['jobs']['pages']);
+		$data['jobs']['pagination'] = self::get_paging_info($data['jobs']['pages'], $pagesize, $page);
 		return $data;
 	}
 
-	public static function makePagination(int $current_page, int $pagesize, int $total_page){
-		$pages = ceil($total_page / $pagesize); // calc pages
+	public static function get_paging_info($tot_rows,$pp,$curr_page){
+		    $pages = ceil($tot_rows / $pp); // calc pages
 
-	    $pagination = []; // start out array
-	    $pagination['si']        = ($current_page * $pagesize) - $pagesize; // what row to start at
-	    $pagination['pages']     = $pages;                   // add the pages
-	    $pagination['curr_page'] = $current_page;               // Whats the current page
+		    $data = array(); // start out array
+		    $data['si']        = ($curr_page * $pp) - $pp; // what row to start at
+		    $data['pages']     = $pages;                   // add the pages
+		    $data['curr_page'] = $curr_page;               // Whats the current page
 
-	    return $pagination; //return the paging data
-	}
+		    return $data; //return the paging data
+
+		}
 }

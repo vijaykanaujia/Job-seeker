@@ -1,5 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
+
+require_once '../vendor/autoload.php';
 use App\Classes\MyCareerjetAPI;
 use App\Core\Input;
 $smartyInstance = $GLOBALS['smarty'];
@@ -11,5 +12,4 @@ $smartyInstance->assign('assets_url', ASSETS_URL);
 $smartyInstance->assign('keyword', Input::get('keyword') ? : '');
 $smartyInstance->assign('location',  Input::get('location') ? : '');
 
-$smartyInstance->display('index.tpl');
-
+$smartyInstance->display('search-result.tpl');
