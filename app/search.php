@@ -1,15 +1,20 @@
 <?php
-
 require_once '../vendor/autoload.php';
+
 use App\Classes\MyCareerjetAPI;
 use App\Core\Input;
-$smartyInstance = $GLOBALS['smarty'];
+use App\Classes\InitSmarty;
 
-$search_result = MyCareerjetAPI::getSearchResult();
+$smartyInstance = InitSmarty::getInstance();
 
-$smartyInstance->assign('search_result',$search_result);
-$smartyInstance->assign('assets_url', ASSETS_URL);
-$smartyInstance->assign('keyword', Input::get('keyword') ? : '');
-$smartyInstance->assign('location',  Input::get('location') ? : '');
+$data = [
+	'page' => 'search',//mendatory
+	'title' => 'Hungry interns',
+];
 
-$smartyInstance->display('search-result.tpl');
+$data['keyword'] = Input::get('keyword') ? : '';
+$data['location'] = Input::get('location') ? : '';
+$data['search_result'] = MyCareerjetAPI::getSearchResult();
+
+$smartyInstance->assign($data);
+$smartyInstance->display('index.tpl');

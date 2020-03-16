@@ -2,7 +2,7 @@
 namespace App\Core;
 class Input
 {
-    public static function exists($type = 'POST')
+    public static function isMethod($type = 'POST')
     {
         switch ($type)
         {

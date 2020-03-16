@@ -1,5 +1,6 @@
 <?php
 namespace App\Core;
+use PDO;
 class Database
 {
     private static $_instance = null;
@@ -148,7 +149,7 @@ class Database
             $x++;
         }
 
-        $sql = "UPDATE {$table} SET {$set} WHERE uid = {$id}";
+        $sql = "UPDATE {$table} SET {$set} WHERE id = {$id}";
 
         if (!$this->query($sql, $fields)->error())
         {

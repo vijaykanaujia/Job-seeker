@@ -1,4 +1,28 @@
-<!doctype html>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-03-14 08:17:32
+  from 'F:\htdocs\core-php-boilerplate\templates\search-result.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e6c850c2de765_74933530',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '68ef91b05deb02391b186ca49b879bf8968b75c1' => 
+    array (
+      0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\search-result.tpl',
+      1 => 1584170247,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:./pagination.tpl' => 1,
+  ),
+),false)) {
+function content_5e6c850c2de765_74933530 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -50,11 +74,14 @@
           <h1 class="mb-5">A Headline Breifly Explaining What The Website Does</h1>
         </div>
         <div class="col-md-12 col-lg-10 col-xl-9 mx-auto">
-          <form class="header-form" action="search.php" method="post">
+          <form class="header-form" action="<?php echo BASE_URL;?>
+/app/search.php" method="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0 flexme">
-                <input type="text" name="keyword" value="{$keyword}" class="form-control form-control-lg" placeholder="Search for a job description......">
-				<input type="text" name="location" value="{$location}" class="form-control form-control-lg" placeholder="Country...">
+                <input type="text" name="keyword" value="<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+" class="form-control form-control-lg" placeholder="Search for a job description......">
+				<input type="text" name="location" value="<?php echo $_smarty_tpl->tpl_vars['location']->value;?>
+" class="form-control form-control-lg" placeholder="Country...">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
@@ -70,29 +97,43 @@
   <section class="home-sec1 text-center">
     <div class="container">
 		<div class="row">
-			{if ($search_result['jobs']['pages'] != 0)}
-				{foreach from=$search_result['jobs']['result'] item=jobs}
+			<?php if (($_smarty_tpl->tpl_vars['search_result']->value['jobs']['pages'] != 0)) {?>
+				<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['search_result']->value['jobs']['result'], 'jobs');
+$_smarty_tpl->tpl_vars['jobs']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['jobs']->value) {
+$_smarty_tpl->tpl_vars['jobs']->do_else = false;
+?>
 					<div class="col-sm-12">
 						<div class="card mb-2">
 							<div class="job-information card-body">
-								<p class="text-left job-title"><a href="{$jobs['url']}">{$jobs['title']}</a></p>
+								<p class="text-left job-title"><a href="<?php echo $_smarty_tpl->tpl_vars['jobs']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['title'];?>
+</a></p>
 								<p class="text-left job-company">
-									<i class="fa fa-building"></i>  {($jobs['company']) ? $jobs['company'] : '..'}
+									<i class="fa fa-building"></i>  <?php echo $_smarty_tpl->tpl_vars['jobs']->value['company'] ? $_smarty_tpl->tpl_vars['jobs']->value['company'] : '..';?>
+
 								</p>
-								<p class="text-left job-location"><i class="fa fa-map-marker"></i> {$jobs['location']}</p>
-								<p class="text-left job-description">{$jobs['description']}</p>
-								<p class="text-left job-date">{$jobs['date']}</p>
+								<p class="text-left job-location"><i class="fa fa-map-marker"></i> <?php echo $_smarty_tpl->tpl_vars['jobs']->value['location'];?>
+</p>
+								<p class="text-left job-description"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['description'];?>
+</p>
+								<p class="text-left job-date"><?php echo $_smarty_tpl->tpl_vars['jobs']->value['date'];?>
+</p>
 							</div>
 						</div>
 					</div>
-				{/foreach}
-			{else}
+				<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+			<?php } else { ?>
 				<div class="col-sm-12">
 					<h4 class="text-center text-warning">No data found</h4>
 				</div>
-			{/if}
+			<?php }?>
 			<div class="col-sm-12 text-right">
-				{include file = './pagination.tpl'}
+				<?php $_smarty_tpl->_subTemplateRender('file:./pagination.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 			</div>
 		</div>
     </div>
@@ -158,8 +199,13 @@
   </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../assets/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 
   </body>
-</html>
+</html><?php }
+}

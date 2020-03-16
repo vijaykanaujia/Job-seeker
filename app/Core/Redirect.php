@@ -18,8 +18,6 @@ class Redirect
                     break;
                 }
             }
-            echo BASE_URL;
-            die;
             header('Location: '.$location);
             exit();
         }

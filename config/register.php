@@ -19,4 +19,13 @@ define('BASE_URL',$base_url);
 define('ASSETS_URL',$base_url."/assets");
 
 
+//validate valid input value
+function valid_input($data) {
+  $data = trim($data); //trim extra whitespace
+  $data = stripslashes($data); //Remove backslashes (\) from the user input data
+  $data = htmlspecialchars($data); //Convert the predefined characters "<" and ">" to HTML entities
+  return $data;
+}
+
+
 
