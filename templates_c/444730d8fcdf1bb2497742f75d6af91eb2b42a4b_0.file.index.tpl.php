@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-15 12:07:34
+/* Smarty version 3.1.34-dev-7, created on 2020-03-17 18:03:25
   from 'F:\htdocs\core-php-boilerplate\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6e0c76700245_21077594',
+  'unifunc' => 'content_5e7102ddce0fa2_66829930',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '444730d8fcdf1bb2497742f75d6af91eb2b42a4b' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\index.tpl',
-      1 => 1584270452,
+      1 => 1584464497,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5e6e0c76700245_21077594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7102ddce0fa2_66829930 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 	<head>
@@ -44,7 +44,7 @@ function content_5e6e0c76700245_21077594 (Smarty_Internal_Template $_smarty_tpl)
 ?>
 
 		<!-- all pages include heare -->
-		<section class="home-sec1" id="<?php echo isset($_smarty_tpl->tpl_vars['page']->value) ? $_smarty_tpl->tpl_vars['page']->value : 'body_section';?>
+		<section class="home-sec1" id="<?php echo isset($_smarty_tpl->tpl_vars['page']->value) ? $_smarty_tpl->tpl_vars['page']->value : 'home';?>
 ">
 			<div class="container">
 				<!-- action message component-->

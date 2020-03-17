@@ -3,11 +3,13 @@ namespace App\Core;
 
 class Config
 {
+    
     public static function get($path = null)
     {
         if ($path)
         {
-            $config = $GLOBALS['config'];
+            $config = self::getConfigArr();
+            
             $path = explode('.', $path);
 
             foreach ($path as $bit)
@@ -23,4 +25,14 @@ class Config
 
         return false;
     }
+
+    private static function getConfigArr(){
+        if(file_exists(BASE_PATH . '/config/config.php'))
+        return include BASE_PATH . '/config/config.php';
+        echo "Plaese make file config/config.php and return array variable";
+        die;
+    }
 }
+
+
+

@@ -9,6 +9,7 @@ use App\Core\Redirect;
 use App\Core\Session;
 
 $smartyInstance = InitSmarty::getInstance();
+$smartyInstance->assign('user', $GLOBALS['user']);
 
 $data = [
 	'page' => 'registration',//mendatory
@@ -91,7 +92,7 @@ if(Input::get('submit') && Input::isMethod('POST')){
 			Redirect::to(BASE_URL ."#home");
 		}else{
 			Session::flash('danger','User registration failed. please try again');
-			Redirect::to(BASE_URL);
+			Redirect::to(BASE_URL ."#home");
 		}
 	}
 }

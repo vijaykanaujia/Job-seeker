@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-15 12:07:34
+/* Smarty version 3.1.34-dev-7, created on 2020-03-17 19:38:18
   from 'F:\htdocs\core-php-boilerplate\templates\components\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6e0c769bf4e7_07620478',
+  'unifunc' => 'content_5e71191a366455_20595320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84199f6211a2f4cc839eea946bcfd9197b1fde94' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\navbar.tpl',
-      1 => 1584270399,
+      1 => 1584470254,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6e0c769bf4e7_07620478 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e71191a366455_20595320 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <!-- Navigation -->
 <div id="hi-menu"> 
 <div class="container"> 
@@ -38,8 +38,13 @@ function content_5e6e0c769bf4e7_07620478 (Smarty_Internal_Template $_smarty_tpl)
 /app/registration.php#registration">Sign Up <span class="sr-only">(current)</span></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo BASE_URL;?>
+			<?php if ($_smarty_tpl->tpl_vars['user']->value->isLoggedIn()) {?>
+				<a class="nav-link" href="<?php echo BASE_URL;?>
+/app/logout.php">Logout</a>
+			<?php } else { ?>
+				<a class="nav-link" href="<?php echo BASE_URL;?>
 /app/login.php#login">Login</a>
+			<?php }?>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="#">|</a>

@@ -1,12 +1,14 @@
 <?php
-
+namespace App\Classes;
+use App\Core\Config;
+use App\Core\Session;
+use App\Core\Database;
 class User
 {
     private $_db,
             $_data,
             $_sessionName,
-            $_cookieName,
-            $_isLoggedIn;
+            $_isLoggedIn = false;
 
     public function __construct($user = null)
     {
@@ -14,9 +16,7 @@ class User
 
         $this->_sessionName = Config::get('session.session_name');
 
-        $this->_cookieName  = Config::get('remember.cookie_name');
-
-        if (! $user)
+        if ($user)
         {
             if (Session::exists($this->_sessionName))
             {
@@ -39,7 +39,7 @@ class User
     {
         if (!$id && $this->isLoggedIn())
         {
-            $id = $this->data()->uid;
+            $id = $this->data()->id;
         }
 
         if (!$this->_db->update('users', $id, $fields))
@@ -60,7 +60,7 @@ class User
     {
         if ($user)
         {
-            $field  = (is_numeric($user)) ? 'uid' : 'username';
+            $field  = (is_numeric($user)) ? 'id' : 'email';
 
             $data = $this->_db->get('users', array($field, '=', $user));
 
@@ -72,11 +72,11 @@ class User
         }
     }
 
-    public function login($username = null, $password = null, $remember = false)
+    public function login($username = null, $password = null)
     {
         if (! $username && ! $password && $this->exists())
         {
-            Session::put($this->_sessionName, $this->data()->uid);
+            Session::put($this->_sessionName, $this->data()->id);
         }
         else
         {
@@ -84,49 +84,11 @@ class User
 
             if ($user)
             {
-                if (Password::check($password, $this->data()->password))
+                if ($this->data()->password == $password)
                 {
-                    Session::put($this->_sessionName, $this->data()->uid);
-
-                    if ($remember)
-                    {
-                        $hash       = Hash::unique();
-                        $hashCheck  = $this->_db->get('users_session', array('user_id', '=', $this->data()->uid));
-
-                        if (!$hashCheck->count())
-                        {
-                            $this->_db->insert('users_session', array(
-                                'user_id'   => $this->data()->uid,
-                                'hash'      => $hash
-                            ));
-                        }
-                        else
-                        {
-                            $hash = $hashCheck->first()->hash;
-                        }
-
-                        Cookie::put($this->_cookieName, $hash, Config::get('remember/cookie_expiry'));
-                    }
-
+                    Session::put($this->_sessionName, $this->data()->id);
                     return true;
                 }
-            }
-        }
-
-        return false;
-    }
-
-    public function hasPermission($key)
-    {
-        $group = $this->_db->get('groups', array('gid', '=', $this->data()->groups));
-
-        if  ($group->count())
-        {
-            $permissions = json_decode($group->first()->permissions, true);
-
-            if ($permissions[$key] == true)
-            {
-                return true;
             }
         }
 
@@ -140,10 +102,7 @@ class User
 
     public function logout()
     {
-        $this->_db->delete('users_session', array('user_id', '=', $this->data()->uid));
-
         Session::delete($this->_sessionName);
-        Cookie::delete($this->_cookieName);
     }
 
     public function data()
@@ -160,10 +119,10 @@ class User
     {
         if ($this->isLoggedIn())
         {
-            $id = $this->data()->uid;
+            $id = $this->data()->id;
         }
 
-        if (!$this->_db->delete('users', array('uid', '=', $id)))
+        if (!$this->_db->delete('users', array('id', '=', $id)))
         {
             throw new Exception('Unable to update the user.');
         }

@@ -6,6 +6,7 @@ use App\Core\Input;
 use App\Classes\InitSmarty;
 
 $smartyInstance = InitSmarty::getInstance();
+$smartyInstance->assign('user', $GLOBALS['user']);
 
 $data = [
 	'page' => 'search',//mendatory

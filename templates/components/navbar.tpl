@@ -13,7 +13,11 @@
 			<a class="nav-link" href="{BASE_URL}/app/registration.php#registration">Sign Up <span class="sr-only">(current)</span></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="{BASE_URL}/app/login.php#login">Login</a>
+			{if $user->isLoggedIn()}
+				<a class="nav-link" href="{BASE_URL}/app/logout.php">Logout</a>
+			{else}
+				<a class="nav-link" href="{BASE_URL}/app/login.php#login">Login</a>
+			{/if}
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="#">|</a>

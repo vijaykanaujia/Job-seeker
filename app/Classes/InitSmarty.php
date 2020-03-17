@@ -3,9 +3,6 @@ namespace App\Classes;
 use Smarty;
 class InitSmarty{
 	private static $_instance = null;
-	public function __construct(){
-
-	}
 
 	public static function getInstance(){
 		if (!isset(self::$_instance))

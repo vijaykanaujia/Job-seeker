@@ -19,7 +19,6 @@
             "App\\": "app/"
         },
         "files": [
-            "./config/config.php",
             "./config/register.php",
             "./config/init.php"
         ]

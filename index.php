@@ -7,10 +7,12 @@ use App\Classes\InitSmarty;
 use App\Core\Session;
 
 $smartyInstance = InitSmarty::getInstance();
+$smartyInstance->assign('user', $GLOBALS['user']);
+
 
 $data = [
 	'page' => 'home',//mendatory
-	'title' => 'Hungry interns',
+	'title' => 'Hungry interns'
 ];
 
 if(isset($_SESSION['success'])){

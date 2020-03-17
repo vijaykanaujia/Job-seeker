@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['config'] = [
+return [
 	'app' => [
         'name'          => 'AppName',
     ],

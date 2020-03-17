@@ -1,4 +1,3 @@
-{if ($search_result['jobs']['pages'] != 0)}
 {assign "paging_info" $search_result['jobs']['pagination']}
 {assign "max" 8}
 <nav aria-label="Page navigation example">
@@ -40,4 +39,3 @@
     {/if}
   </ul>
 </nav>
-{/if}
