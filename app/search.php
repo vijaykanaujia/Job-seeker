@@ -15,6 +15,7 @@ $data = [
 
 $data['keyword'] = Input::get('keyword') ? : '';
 $data['location'] = Input::get('location') ? : '';
+
 $data['search_result'] = MyCareerjetAPI::getSearchResult();
 
 $smartyInstance->assign($data);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-17 17:14:34
+/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:19
   from 'F:\htdocs\core-php-boilerplate\templates\pages\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e70f76a0cade4_38817610',
+  'unifunc' => 'content_5e73888bd1ea39_93675340',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e8a026bb5816e35a26e85ef1c6427ea74483336' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\pages\\search.tpl',
-      1 => 1584461670,
+      1 => 1584507218,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../components/pagination.tpl' => 1,
   ),
 ),false)) {
-function content_5e70f76a0cade4_38817610 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e73888bd1ea39_93675340 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<?php if ($_smarty_tpl->tpl_vars['search_result']->value && ($_smarty_tpl->tpl_vars['search_result']->value['jobs']['pages'] != 0)) {?>
 		<?php

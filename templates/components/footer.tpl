@@ -44,11 +44,11 @@
 
   <div class="row footer-bottom">
 	<div class="col-sm-4">
-		<span class="copyright">@ Hungry Interns 2017 - All Rights Reserved</span>
+		<span class="copyright">@ Hungry Interns 2020 - All Rights Reserved</span>
 	</div>
 	<div class="col-sm-5"></div>
 	<div class="col-sm-3">
-		<span class="copyright">Web design by Studio116</span>
+		<span class="copyright">Web design by Studio 116 Digital, Leeds</span>
 	</div>
   </div>
 </div>

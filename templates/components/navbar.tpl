@@ -2,7 +2,7 @@
 <div id="hi-menu"> 
 <div class="container"> 
  <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"><img src="{ASSETS_URL}/img/logo.png" height="130" class="logo"/></a>
+  <a class="navbar-brand" href="{BASE_URL}"><img src="{ASSETS_URL}/img/logo.png" height="130" class="logo"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-17 18:03:25
+/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:04
   from 'F:\htdocs\core-php-boilerplate\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e7102ddce0fa2_66829930',
+  'unifunc' => 'content_5e73887cb96873_52303661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '444730d8fcdf1bb2497742f75d6af91eb2b42a4b' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\index.tpl',
-      1 => 1584464497,
+      1 => 1584532710,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./components/search-head.tpl' => 1,
     'file:./components/action-message.tpl' => 1,
     'file:./components/footer.tpl' => 1,
+    'file:./components/modals.tpl' => 1,
   ),
 ),false)) {
-function content_5e7102ddce0fa2_66829930 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e73887cb96873_52303661 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 	<head>
@@ -61,6 +62,10 @@ function content_5e7102ddce0fa2_66829930 (Smarty_Internal_Template $_smarty_tpl)
 	  
 	  	<!-- ====== footer component ====== -->
 		<?php $_smarty_tpl->_subTemplateRender("file:./components/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+		<!-- ====== modals component ====== -->
+		<?php $_smarty_tpl->_subTemplateRender("file:./components/modals.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
   	</body>

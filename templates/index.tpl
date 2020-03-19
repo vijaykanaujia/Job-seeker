@@ -28,5 +28,8 @@
 	  	<!-- ====== footer component ====== -->
 		{include file = "./components/footer.tpl"}
 
+		<!-- ====== modals component ====== -->
+		{include file = "./components/modals.tpl"}
+
   	</body>
 </html>

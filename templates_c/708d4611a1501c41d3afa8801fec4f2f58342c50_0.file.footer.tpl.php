@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-14 15:39:28
+/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:05
   from 'F:\htdocs\core-php-boilerplate\templates\components\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6ceca0aa71c9_43778539',
+  'unifunc' => 'content_5e73887d2864e7_31756492',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '708d4611a1501c41d3afa8801fec4f2f58342c50' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\footer.tpl',
-      1 => 1584196759,
+      1 => 1584620534,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6ceca0aa71c9_43778539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e73887d2864e7_31756492 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="footer">
 <div class="container">
@@ -68,11 +68,11 @@ function content_5e6ceca0aa71c9_43778539 (Smarty_Internal_Template $_smarty_tpl)
 
   <div class="row footer-bottom">
 	<div class="col-sm-4">
-		<span class="copyright">@ Hungry Interns 2017 - All Rights Reserved</span>
+		<span class="copyright">@ Hungry Interns 2020 - All Rights Reserved</span>
 	</div>
 	<div class="col-sm-5"></div>
 	<div class="col-sm-3">
-		<span class="copyright">Web design by Studio116</span>
+		<span class="copyright">Web design by Studio 116 Digital, Leeds</span>
 	</div>
   </div>
 </div>

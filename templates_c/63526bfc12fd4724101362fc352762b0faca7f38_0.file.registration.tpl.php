@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-15 11:07:34
+/* Smarty version 3.1.34-dev-7, created on 2020-03-19 16:08:09
   from 'F:\htdocs\core-php-boilerplate\templates\pages\registration.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e6dfe66bf8c54_03050633',
+  'unifunc' => 'content_5e738ad97a3ec6_61389263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63526bfc12fd4724101362fc352762b0faca7f38' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\pages\\registration.tpl',
-      1 => 1584266849,
+      1 => 1584507218,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6dfe66bf8c54_03050633 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e738ad97a3ec6_61389263 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form method="post" action="<?php echo BASE_URL;?>
 /app/registration.php">
   <div class="form-group">

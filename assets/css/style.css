@@ -27,15 +27,21 @@ h5,
 h6 {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #ff6633; 
 }
 h2{
-    font-size: 40px;
-    color: #ff6633;
     font-weight: 300;
 }
 .home-sec1 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+.home-content h2, .home-content h1 {
+    margin-top: 40px;
+    text-align: center;
+}
+.home-content p {
+    text-align: center;
 }
 header.masthead {
   position: relative;
@@ -56,10 +62,10 @@ header.masthead .overlay {
   opacity: 0.3;
 }
 
-header.masthead h1 {	
+header.masthead h1 {  
   font-size: 33px;
   font-size: 2.063rem;
-  
+  color: #fff;  
   font-weight: 300;
 }
 .btn-primary {
@@ -76,22 +82,22 @@ div#hi-menu {
     border-bottom: 5px solid #fc672c;
 }
 @media (min-width: 768px) {
-	header.masthead {
-		padding-top: 12rem;
-		padding-bottom: 12rem;
-	}
-	header.masthead h1 {
-		font-size: 2.75rem;	
-	}
-	img.logo {
-		position: absolute;
-		top: 0;
-		z-index: 99;
-	}
-	.mb100{
-		margin-top: 6.25rem;
-	}
-	    
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 2.75rem; 
+  }
+  img.logo {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+  }
+  .mb100{
+    margin-top: 6.25rem;
+  }
+      
 }
 .hi-header {
     height: 100px;
@@ -122,7 +128,7 @@ div#hi-menu {
     line-height: 1.5;
     border-radius: 0.1rem;
     color: #999;
-	font-weight: 300;
+  font-weight: 300;
     border: 1px solid #cccccc;
 }
 form.header-form {
@@ -146,22 +152,22 @@ section {
 }
 
 p.nav-heading{
-	color: #ddd;
+  color: #ddd;
     font-size: 16px;
     font-weight: 500;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .footer-sub-heading li{
     padding-bottom: 10px;
 }
 .footer-sub-heading a{
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #ddd;
-	font-size: 14px;
-	font-weight: 500;
-	font-size: 16px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 ul.follow-links {
@@ -174,43 +180,43 @@ footer.footer ul.follow-links li {
 }
 
 ul.follow-links li:first-child{
-	color:#aaa;
-	font-size: 18px;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#aaa;
+  font-size: 18px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .copyright{
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#999;
-	font-size:12px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#999;
+  font-size:12px;
 }
 footer.footer {
-	position: relative;
+  position: relative;
     background-color: #1f2228;
     background-size: cover;
     padding-top: 6.25rem;;
-	z-index: 99;
-	overflow: hidden;
+  z-index: 99;
+  overflow: hidden;
 }
 footer.footer:after {
     background:url(../img/footer-bgd.png) no-repeat center center;
-	content:'';
-	position: absolute;
-	width: 100%;
-	height: 250px;
-	z-index: -1;
-	bottom: 0px;
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  z-index: -1;
+  bottom: 0px;
 }
 h4.nav-heading {
     color: #fff;
     font-weight: 300;
-	border-bottom: 1px solid;
+  border-bottom: 1px solid;
     padding-bottom: 20px;
-    margin-bottom: 40px;	
-	max-width: 55%;
+    margin-bottom: 40px;  
+  max-width: 55%;
 }
 .footer-bottom{
-	margin-top: 60px;
+  margin-top: 60px;
     margin-bottom: 30px;
 }
 .footer i.fa {
@@ -235,8 +241,8 @@ i.fa.fa-twitter {
 }
 
 @media(max-width: 767px){
-	.col-sm-3.mb100 {
-		margin-top: 30px;
-		text-align: center;
-	}
+  .col-sm-3.mb100 {
+    margin-top: 30px;
+    text-align: center;
+  }
 }
