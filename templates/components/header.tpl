@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="{ASSETS_URL}/css/bootstrap.min.css">
 <link rel="stylesheet" href="{ASSETS_URL}/css/style.css">
 <title>{(isset($title)) ? $title : 'Hungry interns'}</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

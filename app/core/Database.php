@@ -9,6 +9,7 @@ class Database
             $_query,
             $_error = false,
             $_results,
+            $_id = null,
             $_count = 0;
 
     private function __construct()
@@ -58,6 +59,7 @@ class Database
             {
                 $this->_results     = $this->_query->fetchAll(PDO::FETCH_OBJ);
                 $this->_count       = $this->_query->rowCount();
+                $this->_id   = $this->_pdo->lastInsertId();
             }
             else
             {
@@ -178,5 +180,9 @@ class Database
     public function count()
     {
         return $this->_count;
+    }
+
+    public function getLastInsertId(){
+        return $this->_id;
     }
 }

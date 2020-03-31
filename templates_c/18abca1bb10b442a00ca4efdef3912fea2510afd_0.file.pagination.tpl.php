@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:20
+/* Smarty version 3.1.34-dev-7, created on 2020-03-24 10:39:42
   from 'F:\htdocs\core-php-boilerplate\templates\components\pagination.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e73888c3b4916_82003421',
+  'unifunc' => 'content_5e79d55e41ba63_23296476',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '18abca1bb10b442a00ca4efdef3912fea2510afd' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\pagination.tpl',
-      1 => 1584507218,
+      1 => 1584964185,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e73888c3b4916_82003421 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e79d55e41ba63_23296476 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('paging_info', $_smarty_tpl->tpl_vars['search_result']->value['jobs']['pagination']);
 $_smarty_tpl->_assignInScope('max', 8);?>
 <nav aria-label="Page navigation example">
@@ -52,7 +52,7 @@ if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = $_smarty_tpl->tpl_vars['sp']->value, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration === $_smarty_tpl->tpl_vars['i']->total;?>
  		<?php if (($_smarty_tpl->tpl_vars['i']->value > $_smarty_tpl->tpl_vars['paging_info']->value['pages'])) {?>
- 			{ continue }
+ 			<?php continue 1;?>
  		<?php }?>
  		<?php if (($_smarty_tpl->tpl_vars['paging_info']->value['curr_page'] == $_smarty_tpl->tpl_vars['i']->value)) {?>
     		<li class="page-item <?php ob_start();

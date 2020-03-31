@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:04
+/* Smarty version 3.1.34-dev-7, created on 2020-03-24 10:27:08
   from 'F:\htdocs\core-php-boilerplate\templates\components\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e73887ce3a593_59141096',
+  'unifunc' => 'content_5e79d26c61e062_50179589',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84199f6211a2f4cc839eea946bcfd9197b1fde94' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\navbar.tpl',
-      1 => 1584620570,
+      1 => 1585034415,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e73887ce3a593_59141096 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e79d26c61e062_50179589 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <!-- Navigation -->
 <div id="hi-menu"> 
 <div class="container"> 

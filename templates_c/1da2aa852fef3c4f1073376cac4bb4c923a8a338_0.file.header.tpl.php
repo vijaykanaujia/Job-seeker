@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:04
+/* Smarty version 3.1.34-dev-7, created on 2020-03-23 09:34:23
   from 'F:\htdocs\core-php-boilerplate\templates\components\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e73887cd82be6_14662502',
+  'unifunc' => 'content_5e78748f211da4_79072575',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1da2aa852fef3c4f1073376cac4bb4c923a8a338' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\header.tpl',
-      1 => 1584621718,
+      1 => 1584952458,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e73887cd82be6_14662502 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e78748f211da4_79072575 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,5 +33,8 @@ function content_5e73887cd82be6_14662502 (Smarty_Internal_Template $_smarty_tpl)
 <link rel="stylesheet" href="<?php echo ASSETS_URL;?>
 /css/style.css">
 <title><?php echo isset($_smarty_tpl->tpl_vars['title']->value) ? $_smarty_tpl->tpl_vars['title']->value : 'Hungry interns';?>
-</title><?php }
+</title>
+<?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><?php echo '</script'; ?>
+><?php }
 }

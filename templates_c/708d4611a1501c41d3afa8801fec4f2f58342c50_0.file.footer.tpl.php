@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-19 15:58:05
+/* Smarty version 3.1.34-dev-7, created on 2020-03-25 12:58:24
   from 'F:\htdocs\core-php-boilerplate\templates\components\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e73887d2864e7_31756492',
+  'unifunc' => 'content_5e7b476038aa59_52227338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '708d4611a1501c41d3afa8801fec4f2f58342c50' => 
     array (
       0 => 'F:\\htdocs\\core-php-boilerplate\\templates\\components\\footer.tpl',
-      1 => 1584620534,
+      1 => 1585137496,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e73887d2864e7_31756492 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7b476038aa59_52227338 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="footer">
 <div class="container">
@@ -78,12 +78,12 @@ function content_5e73887d2864e7_31756492 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 </footer>
 
-
-<?php echo '<script'; ?>
- src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><?php echo '</script'; ?>
->
 <?php echo '<script'; ?>
  src="<?php echo ASSETS_URL;?>
 /js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo ASSETS_URL;?>
+/js/hunger-interns.js"><?php echo '</script'; ?>
 ><?php }
 }

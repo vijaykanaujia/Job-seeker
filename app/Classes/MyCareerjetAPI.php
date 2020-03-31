@@ -5,7 +5,7 @@ use App\Classes\Careerjet_API;
 use App\Core\Input;
 class MyCareerjetAPI{
 
-	public static function getSearchResult(){
+	public static function getSearchResult($pagesize, $url_is_active, $show_pagination){
 
 		$data = [];
 		$keyword = Input::get('keyword') ? : '';
@@ -13,13 +13,12 @@ class MyCareerjetAPI{
 		$api = new Careerjet_API('en_GB') ;
 		$page = Input::get('page') ? : 1; # Or from parameters.
 
-		$pagesize = Input::get('pagesize') ? : 10;
-
 		$result = $api->search(array(
 		  'keywords' => $keyword,
 		  'location' => $locaiton,
 		  'page' => $page,
 		  'pagesize' => $pagesize,
+		  'contracttype' => 'i',
 		  'affid' => '5704082add03b271cfad611e8cd277c7',
 		));
 
@@ -36,10 +35,12 @@ class MyCareerjetAPI{
 						'company' => $job->company,
 						'salary' => $job->salary,
 						'date' => $job->date,
-						'description' => $job->description
+						'description' => $job->description,
+						'url_is_active' => $url_is_active
 					];
 				}
 				$data['jobs']['pagination'] = self::get_paging_info($data['jobs']['pages'], $pagesize, $page);
+				$data['jobs']['show_pagination'] = $show_pagination;
 			}
 		}
 		

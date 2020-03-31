@@ -42,4 +42,10 @@ function dd(...$agrs){
 }
 
 
+define('TBL_USERS','users');
+define('TBL_UNIVERSITIES','universities');
+define('TBL_STUDENTS','students');
+define('TBL_VISITORS','visitors');
+
+
 

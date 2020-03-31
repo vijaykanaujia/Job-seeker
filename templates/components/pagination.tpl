@@ -20,7 +20,7 @@
     {/if}
 		{for $i = $sp to ($sp + $max -1)}
  		{if ($i > $paging_info['pages'])}
- 			{ continue }
+ 			{continue}
  		{/if}
  		{if ($paging_info['curr_page'] == $i)}
     		<li class="page-item {($paging_info['curr_page'] == {$i}) ? 'active' : ''}"><a class="page-link" href="?keyword={$keyword}&location={$location}&page={$i}">{$i}</a></li>

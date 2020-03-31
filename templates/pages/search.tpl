@@ -1,10 +1,11 @@
+<h2 class="mb-5 text-center">Search results</h3>
 <div class="row">
 	{if $search_result && ($search_result['jobs']['pages'] != 0)}
 		{foreach from=$search_result['jobs']['result'] item=jobs}
 			<div class="col-sm-12">
 				<div class="card mb-2">
 					<div class="job-information card-body">
-						<p class="text-left job-title"><a href="{$jobs['url']}">{$jobs['title']}</a></p>
+						<p class="text-left job-title"><a href="{($jobs['url_is_active']) ? $jobs['url'] : 'javascript:showModal()'}">{$jobs['title']}</a></p>
 						<p class="text-left job-company">
 							<i class="fa fa-building"></i>  {($jobs['company']) ? $jobs['company'] : '..'}
 						</p>
@@ -16,7 +17,24 @@
 			</div>
 		{/foreach}
 		<div class="col-sm-12 text-right">
-			{include file = '../components/pagination.tpl'}
+			{if $search_result['jobs']['show_pagination']}
+				{include file = '../components/pagination.tpl'}
+			{else}
+				<button type="button" class="btn btn-sm btn-default" onclick="showModal()">More...</button>
+				<script type="text/javascript">
+					setTimeout(function(){
+						showModal();
+					},10000);
+
+					function showModal(){
+						if(! ($("element").data('bs.modal') || {})._isShown){
+							$('#guestSearchRestrictionModal').modal({
+						  		show: true
+							});
+						}
+					}
+				</script>					
+			{/if}
 		</div>
 	{else}
 		<div class="col-sm-12">

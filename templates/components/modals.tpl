@@ -1,14 +1,16 @@
-<div id="guestSearchRestrictionModal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+<div id="guestSearchRestrictionModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <p>Please register and login to continue search.</p>
+      <br><br><br>
+      <div class="modal-body p-5 text-center">
+        <p class="fa-2x">Please <a href="{BASE_URL}/app/registration.php#registration">register</a> or <a href="{BASE_URL}/app/login.php#login">login</a> to continue search.</p>
       </div>
+      <br><br><br>
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ use App\Core\Session;
 use App\Core\Database;
 class User
 {
+    private static $_instance = null;
     private $_db,
             $_data,
             $_sessionName,
@@ -33,6 +34,17 @@ class User
         {
             $this->find($user);
         }
+    }
+
+    public static function getInstance()
+    {
+        $user_session = Session::exists(Config::get('session.session_name'));
+        if (!isset(self::$_instance))
+        {
+            self::$_instance = new User($user_session);
+        }
+
+        return self::$_instance;
     }
 
     public function update($fields = array(), $id = null)

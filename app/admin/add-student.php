@@ -1,19 +1,20 @@
 <?php
-require_once '../vendor/autoload.php';
-
-require_once BASE_PATH . '/app/middleware/student.php';
+require_once '../../vendor/autoload.php';
+require_once BASE_PATH . "/app/middleware/admin.php";
 
 use App\Core\Input;
 use App\Core\Database;
 use App\Classes\InitSmarty;
 use App\Core\Redirect;
 use App\Core\Session;
+use App\Classes\User;
 
 $smartyInstance = InitSmarty::getInstance();
-$smartyInstance->assign('user', $GLOBALS['user']);
+$userInstance = User::getInstance();
+$smartyInstance->assign('user', $userInstance);
 
 $data = [
-	'page' => 'registration',//mendatory
+	'page' => 'add-student',//mendatory
 	'title' => 'Hungry interns',
 ];
 
@@ -108,19 +109,20 @@ if(Input::get('submit') && Input::isMethod('POST')){
 			$student_fields['user_id'] = $last_insert_id;
 			$result = $db->insert('students',$student_fields);
 			if($result){
-				Session::flash('success','User registration successfully !');
-				Redirect::to(BASE_URL ."#home");
+				Session::flash('success','Student added successfully !');
+				Redirect::to(HOME_URL ."#home");
 			}else{
 				$db->delete('users',['id', '=', $last_insert_id]);
-				Session::flash('danger','User registration adding failed. please try again');
-				Redirect::to(BASE_URL ."#home");
+				Session::flash('danger','Student adding failed. please try again');
+				Redirect::to(HOME_URL ."#home");
 			}
 		}else{
-			Session::flash('danger','user registration failed. please try again');
-			Redirect::to(BASE_URL ."#home");
+			Session::flash('danger','Student adding failed. please try again');
+			Redirect::to(HOME_URL ."#home");
 		}
 	}
 }
 
 $smartyInstance->assign($data);
 $smartyInstance->display($redirect_to);
+

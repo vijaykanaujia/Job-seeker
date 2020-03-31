@@ -6,7 +6,7 @@
   {/literal}
 </style>
 
-<form method="post" action="{BASE_URL}/app/registration.php">
+<form method="post" action="{BASE_URL}/app/admin/add-student.php">
   <div class="form-group">
       <label for="university_id">University<span class="text-danger pull-right">*</span></label>
       <select class="form-control" id="university_id"  name="university_id">
