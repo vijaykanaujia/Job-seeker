@@ -19,7 +19,7 @@ class MyCareerjetAPI{
 		  'page' => $page,
 		  'pagesize' => $pagesize,
 		  'contracttype' => 'i',
-		  'affid' => '5704082add03b271cfad611e8cd277c7',
+		  'affid' => '0afaf0173305e4b9',
 		));
 
 
