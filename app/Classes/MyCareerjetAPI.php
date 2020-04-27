@@ -5,12 +5,12 @@ use App\Classes\Careerjet_API;
 use App\Core\Input;
 class MyCareerjetAPI{
 
-	public static function getSearchResult($pagesize, $url_is_active, $show_pagination){
+	public static function getSearchResult($pagesize = 15, $url_is_active = true, $show_pagination = true){
 
 		$data = [];
 		$keyword = Input::get('keyword') ? : '';
 		$locaiton = Input::get('location') ? : '';
-		$api = new Careerjet_API('en_GB') ;
+		$api = new Careerjet_API() ;
 		$page = Input::get('page') ? : 1; # Or from parameters.
 
 		$result = $api->search(array(
@@ -34,12 +34,14 @@ class MyCareerjetAPI{
 						'location' => $job->locations,
 						'company' => $job->company,
 						'salary' => $job->salary,
-						'date' => $job->date,
+						'date' => date('F d', strtotime($job->date)),
 						'description' => $job->description,
-						'url_is_active' => $url_is_active
+						'url_is_active' => $url_is_active,
+						'job_status' => oldJobeOrNew($job->date)
 					];
 				}
 				$data['jobs']['pagination'] = self::get_paging_info($data['jobs']['pages'], $pagesize, $page);
+				$data['jobs']['short_page_info'] = $page . " to " . ($pagesize + $page) . " of " . $result->hits ." jobs"; 
 				$data['jobs']['show_pagination'] = $show_pagination;
 			}
 		}

@@ -1,11 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" integrity="sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js" integrity="sha256-vucLmrjdfi9YwjGY/3CQ7HnccFSS/XRS1M/3k/FDXJw=" crossorigin="anonymous"></script>
-<style type="text/css">
-  {literal}
-    .select2-container .select2-selection--single{height: 38px !important;}
-  {/literal}
-</style>
-
 <form method="post" action="{BASE_URL}/app/admin/add-student.php">
   <div class="form-group">
       <label for="university_id">University<span class="text-danger pull-right">*</span></label>
@@ -41,18 +33,6 @@
 <script>
   var uni_id = "{(isset($university_id)) ? $university_id : ''}";
   $(function(){
-      $('#university_id').select2({
-          placeholder: 'Please select Universit',
-          allowClear: true,
-          ajax: {
-              url: '{BASE_URL}/app/ajax/search-university.php',
-              processResults: function (data) {
-                  return {
-                      results: JSON.parse(data)
-                  };
-              }
-          }
-      });
       $('#university_id').change(function(){
         localStorage.setItem('university_email', $(this).find(':selected').text())
       });

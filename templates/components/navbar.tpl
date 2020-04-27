@@ -10,18 +10,19 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">  
 	<ul class="navbar-nav ml-auto">
 		<li class="nav-item active">
-			<a class="nav-link" href="{BASE_URL}/app/registration.php#registration">Sign Up <span class="sr-only">(current)</span></a>
+			<a class="nav-link sign-up-button" href="javascript:void(0)" onclick="getSignUpModal()">Sign Up <span class="sr-only">(current)</span></a>
 		</li>
 		<li class="nav-item">
 			{if $user->isLoggedIn()}
 				<a class="nav-link" href="{BASE_URL}/app/logout.php">Logout</a>
 			{else}
-				<a class="nav-link" href="{BASE_URL}/app/login.php#login">Login</a>
+				<a class="nav-link" href="javascript:void(0)" onclick="getSignInModal()">Login</a>
 			{/if}
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="#">|</a>
 		</li>
+		<li class="nav-item"><a class="nav-link" href="{BASE_URL}/app/about-us.php">About us</a></li>
 	</ul>
   </div>
 </nav>

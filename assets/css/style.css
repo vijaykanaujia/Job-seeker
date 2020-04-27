@@ -50,6 +50,16 @@ header.masthead {
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  background-position: bottom;
+}
+
+footer.footer {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/overlay.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 header.masthead .overlay {
@@ -83,8 +93,8 @@ div#hi-menu {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 3rem;
+    padding-bottom: 25rem;
   }
   header.masthead h1 {
     font-size: 2.75rem; 
@@ -199,7 +209,7 @@ footer.footer {
   overflow: hidden;
 }
 footer.footer:after {
-    background:url(../img/footer-bgd.png) no-repeat center center;
+  background:url(../img/footer-bgd3.png) no-repeat center center;
   content:'';
   position: absolute;
   width: 100%;
@@ -245,4 +255,104 @@ i.fa.fa-twitter {
     margin-top: 30px;
     text-align: center;
   }
+}
+
+.select2-container .select2-selection--single{height: 38px !important;}
+.hide{display: none;}
+
+.short-paging-info{color: #969696;font-size: 13px;}
+.jobs-list .job-title,.jobs-list .job-title > a{
+  font-size: 16px;
+  color: #263656;
+  line-height: 17px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+.jobs-list:hover {
+  background-color: #fafafa;
+}
+
+.job-company{
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: bold;
+    color: #575757;
+    padding-bottom: 2px;
+}
+
+.job-location{
+    color: #666;
+    line-height: 1.4em;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+.job-description{
+    color: #393939;
+    line-height: 1.29em;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    font-size: 14px;
+}
+
+.job-marker{
+  font-size: 13px;
+  padding-right: 4px;
+  position: relative;
+  top: -2px;
+}
+
+.jobs-list .status{
+    color: red;
+    font-size: 13px;
+    padding-left: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.jobs-list .job-date{
+  color: #969696;
+  line-height: 1.3em;
+  font-size: 14px;
+}
+
+.save-job,.share-job{
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  color: #2366b6;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+.save-job:hover,.share-job:hover{
+  text-decoration: underline;
+}
+.job-action-div{align-items: center;}
+
+.share-with a > i.fa-facebook,.share-with a > i.fa-twitter,.share-with a > i.fa-linkedin{
+  color: #fff;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 5px;
+}
+.share-with a > i.fa-facebook{
+  background-color: #3162a2;
+}
+.share-with a > i.fa-twitter{
+  background-color: #2eb1eb;
+}
+.share-with a > i.fa-linkedin{
+  background-color: #2366b6;
+}
+
+.sign-up-button{
+  border: 1px solid #fc672c;
+  padding: 6px 10px !important;
+  border-radius: 4px;
+  margin-right: 8px;
+  color: #fc672c!important;
 }

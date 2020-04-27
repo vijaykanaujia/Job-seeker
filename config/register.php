@@ -21,6 +21,10 @@ if($domain == 'localhost'){
 
 define('BASE_URL',$base_url);
 define('ASSETS_URL',$base_url."/assets");
+define('TBL_USERS','users');
+define('TBL_UNIVERSITIES','universities');
+define('TBL_STUDENTS','students');
+define('TBL_VISITORS','visitors');
 
 
 
@@ -41,11 +45,34 @@ function dd(...$agrs){
 	exit();
 }
 
+function sendMail(string $to, string $subject, string $message){
+	$to = $to;
+	$subject = $subject;
+	$message = $message;
+	$header = '';
+	$header .= "MIME-Version: 1.0\r\n";
+ 	$header .= "Content-type: text/html\r\n";
+ 	$success = mail ($to, $subject, $message, $header);
+ 	if(! $success) {
+		return false;
+	}else{
+		return true;
+	}	
+}
 
-define('TBL_USERS','users');
-define('TBL_UNIVERSITIES','universities');
-define('TBL_STUDENTS','students');
-define('TBL_VISITORS','visitors');
+function oldJobeOrNew($jobDate){
+	$now = new DateTime();
+	$jobDate = new DateTime($jobDate);
+	$diff = $now->diff($jobDate);
+	if($diff->y == 0){
+		return 'new';
+	}else{
+		return 'old';
+	}
+}
+
+
+
 
 
 

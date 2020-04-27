@@ -1,5 +1,5 @@
 <?php
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 use App\Classes\MyCareerjetAPI;
 use App\Core\Input;
@@ -18,11 +18,11 @@ $data['keyword'] = Input::get('keyword') ? : '';
 $data['location'] = Input::get('location') ? : '';
 
 if($user->isLoggedIn()){
-	$pagesize = 10;
+	$pagesize = 15;
 	$url_is_active = true;
 	$show_pagination = true;
 }else{
-	$pagesize = 3;
+	$pagesize = 15;
 	$url_is_active = false;
 	$show_pagination = false;
 }
@@ -31,4 +31,4 @@ if($user->isLoggedIn()){
 $data['search_result'] = MyCareerjetAPI::getSearchResult($pagesize, $url_is_active, $show_pagination);
 
 $smartyInstance->assign($data);
-$smartyInstance->display('index.tpl');
+$smartyInstance->display('helpers/search-jobs.tpl');

@@ -52,7 +52,8 @@ if(Input::get('submit') && Input::isMethod('POST')){
 				$errors = true;
 			}else{
 				$db = Database::getInstance();
-				$res = $db->get('users',['email', '=', $email]);
+				$query = explode('@', $email);
+				$res = $db->query("SELECT * FROM ". TBL_UNIVERSITIES . " WHERE email LIKE '%{$query[1]}'");
 				if(! ($res->count() === 0)){
 					$data['email_error'] = 'This email already taken';
 					$errors = true;
@@ -65,7 +66,7 @@ if(Input::get('submit') && Input::isMethod('POST')){
 
 	if(! $errors){
 		$db = Database::getInstance();
-		$result = $db->insert('universities',$fields);
+		$result = $db->insert(TBL_UNIVERSITIES ,$fields);
 		if($result){
 			Session::flash('success','university created successfully !');
 			Redirect::to(BASE_URL ."/app/admin#home");

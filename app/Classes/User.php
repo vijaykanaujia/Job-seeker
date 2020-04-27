@@ -57,6 +57,8 @@ class User
         if (!$this->_db->update('users', $id, $fields))
         {
             throw new Exception('Unable to update the user.');
+        }else{
+            return true;
         }
     }
 
@@ -96,15 +98,19 @@ class User
 
             if ($user)
             {
-                if ($this->data()->password == $password)
+                if ($this->data()->is_mail_verify == 'yes')
                 {
-                    Session::put($this->_sessionName, $this->data()->id);
-                    return true;
+                    if($this->data()->password == $password){
+                        Session::put($this->_sessionName, $this->data()->id);
+                        return ['login' => true,'is_mail_verify' => true];
+                    }else{
+                        return ['login' => false,'is_mail_verify' => true];
+                    }
+                }else{
+                    return ['login' => false,'is_mail_verify' => false];
                 }
             }
         }
-
-        return false;
     }
 
     public function exists()

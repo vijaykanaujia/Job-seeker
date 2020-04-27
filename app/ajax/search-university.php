@@ -7,7 +7,7 @@ $uni_list = [];
 $query = Input::get('q')? : '';
 $getDbInstance = Database::getInstance();
 
-$label = $getDbInstance->query("SELECT * FROM `universities` WHERE `name` LIKE '%".$query."%'");
+$label = $getDbInstance->query("SELECT * FROM ". TBL_UNIVERSITIES . " WHERE `name` LIKE '%".$query."%'");
 
 if ($label->count() > 0) {
     foreach ($label->results() as $key) {

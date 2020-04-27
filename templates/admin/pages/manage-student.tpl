@@ -10,7 +10,7 @@
                         <td colspan="7" class="border-top-0">
                            <div class="row">
                               <div class="col-sm-12">
-                                 <p class="mb-0 potentail-info"><i class="fa fa-building fa-2x"></i> &nbsp;&nbsp; we have <span class="text-info fa-2x">{(isset($pagination['total'])) ? $pagination['total'] : 0}</span> Students</p>
+                                 <p class="mb-0 potentail-info"><i class="fa fa-users fa-2x"></i> &nbsp;&nbsp; we have <span class="text-info fa-2x">{(isset($pagination['total'])) ? $pagination['total'] : 0}</span> Students</p>
                               </div>
                            </div>
                         </td>
