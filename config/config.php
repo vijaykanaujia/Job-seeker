@@ -7,8 +7,8 @@ return [
     'mysql' => [
         'host'          => '127.0.0.1',
         'username'      => 'root',
-        'password'      => '',
-        'db_name'        => 'core_php_boilerplate'
+        'password'      => 'root',
+        'db_name'        => 'hungryintern'
     ],
     /*'mysql' => [
         'host'          => '127.0.0.1',
